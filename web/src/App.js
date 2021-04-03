@@ -5,10 +5,12 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 // Page imports
 import Login from './pages/login';
 import Recycle from './pages/recycle';
+import TableItems from './pages/tableItems';
 
 // Component imports
 import Fonts from './components/Fonts';
 import ResRoute from './components/ResRoute';
+import tableItems from './pages/tableItems';
 
 const App = props => {
   let user = JSON.parse(localStorage.getItem('app-user'));
@@ -25,6 +27,7 @@ const App = props => {
           <Route exact path="/" component={() => <Text>Home</Text>} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/recycle" component={Recycle} />
+          <Route exact path="/table-items" component={tableItems} />
         </Switch>
       </Box>
     </>
