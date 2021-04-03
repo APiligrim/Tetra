@@ -3,6 +3,7 @@ import { Button, Box, Heading, Spacer, Flex, Text } from '@chakra-ui/react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 // Page imports
+import Login from './pages/login';
 
 // Component imports
 import Fonts from './components/Fonts';
@@ -21,6 +22,7 @@ const App = props => {
 
         <Switch>
           <Route exact path="/" component={() => <Text>Home</Text>} />
+          <Route exact path="/login" component={Login} />
         </Switch>
       </Box>
     </>
