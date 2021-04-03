@@ -5,6 +5,8 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 // Page imports
 import Login from './pages/login';
 import Recycle from './pages/recycle';
+import AddParts from './pages/addParts';
+import AddProducts from './pages/addProducts';
 
 // Component imports
 import Fonts from './components/Fonts';
@@ -20,11 +22,12 @@ const App = props => {
       <Fonts />
       <Box textAlign="center" fontSize="xl" p={6} height="100vh">
         <Nav history={props.history} currentUser={currentUser} />
-
         <Switch>
           <Route exact path="/" component={() => <Text>Home</Text>} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/recycle" component={Recycle} />
+          <Route exact path="/addParts" component={AddParts} />
+          <Route exact path="/addProducts" component={AddProducts} />
         </Switch>
       </Box>
     </>
