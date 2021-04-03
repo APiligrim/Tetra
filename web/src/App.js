@@ -4,6 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 
 // Page imports
 import Login from './pages/login';
+import Recycle from './pages/recycle';
 
 // Component imports
 import Fonts from './components/Fonts';
@@ -23,6 +24,7 @@ const App = props => {
         <Switch>
           <Route exact path="/" component={() => <Text>Home</Text>} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/recycle" component={Recycle} />
         </Switch>
       </Box>
     </>
@@ -31,7 +33,7 @@ const App = props => {
 
 const Nav = ({ history, currentUser }) => {
   return (
-    <Flex>
+    <Flex marginBottom={3}>
       <Box>
         <Heading
           onClick={() => history.push('/')}
