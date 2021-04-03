@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  ChakraProvider,
-  Box,
-  Heading,
-  Spacer,
-  Flex,
-  Text,
-  extendTheme,
-} from '@chakra-ui/react';
+import { Button, Box, Heading, Spacer, Flex, Text } from '@chakra-ui/react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 // Page imports
@@ -23,49 +14,18 @@ const App = props => {
   const [currentUser, setCurrentUser] = useState(user);
 
   return (
-    <ChakraProvider theme={customTheme}>
+    <>
       <Fonts />
       <Box textAlign="center" fontSize="xl" p={6} height="100vh">
         <Nav history={props.history} currentUser={currentUser} />
+
         <Switch>
           <Route exact path="/" component={() => <Text>Home</Text>} />
         </Switch>
       </Box>
-    </ChakraProvider>
+    </>
   );
 };
-
-const customTheme = extendTheme({
-  fonts: {
-    heading: 'Montserrat',
-    body: 'Montserrat',
-  },
-  styles: {
-    global: props => ({
-      'html, body': {
-        fontSize: 'md',
-        lineHeight: 'tall',
-      },
-      a: {
-        color: 'teal.500',
-      },
-    }),
-  },
-  colors: {
-    brand: {
-      100: '#001348',
-      200: '#00316A',
-      300: '#009CD6',
-    },
-  },
-  components: {
-    Button: {
-      baseStyle: {},
-    },
-  },
-  initialColorMode: 'dark',
-  useSystemColorMode: false,
-});
 
 const Nav = ({ history, currentUser }) => {
   return (
