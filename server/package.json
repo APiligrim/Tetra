@@ -20,11 +20,12 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "fabric-client": "^1.4.17",
+    "fabric-contract-api": "^2.2.1",
+    "fabric-shim": "^2.2.1",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {},
   "engines": {
-    "node": "10.24.0"
+    "node": "12.16.1"
   }
 }
