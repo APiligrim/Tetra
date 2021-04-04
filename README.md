@@ -37,6 +37,7 @@ We were inspired to create this project after reading ongoing [**news**](https:/
 
 **Tetra** is a sustainable supply chain managment system that helps clothing brands have clear transparency into each stage of their supply chain while also helping them recycle more of their unsold inventory. 
 
+# Technical Backbone🖥️🌿
 Tetra's technical backbone uses blockchain for business using Ethereum and Web3.js. This allows each product in the inventory to have a unique ID that can be traced and tracked to see which stages in the supply chain it has gone through (example: shipping stage, factory, supply). It will also show what types of materials this product is made out of. If this item is unsold, admins can send the item to a recycling facility. Once a product gets recycled, users of Tetra can also trace the history of the different parts that made up that product got recycled into.
 
 Some of the completed user stories are:
