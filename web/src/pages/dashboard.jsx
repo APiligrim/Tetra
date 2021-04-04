@@ -25,6 +25,7 @@ import {
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import items from './items';
 import '../assets/scroll.css';
+import Background from '../assets/img/background-table.png';
 
 const Dashboard = ({ history }) => {
   const toast = useToast();
@@ -40,6 +41,7 @@ const Dashboard = ({ history }) => {
 
   return (
     <Flex justifyContent="center" alignItems="center">
+      <img src={Background}/>
       <Flex
         textAlign="center"
         fontSize="md"
@@ -51,6 +53,7 @@ const Dashboard = ({ history }) => {
         width="85%"
         alignItems="center"
         height="76vh"
+        className='arrange-to-top'
       >
         <Flex
           width="100%"
