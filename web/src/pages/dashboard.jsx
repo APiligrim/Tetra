@@ -33,6 +33,8 @@ const Dashboard = ({ history }) => {
       history.push(`/addParts`);
     } else if (org === 'Factory') {
       history.push(`/addProducts`);
+    } else if (org === 'Retail Store') {
+      history.push(`/recycle`);
     } else {
       history.push(`/tableItems/${org}`);
     }
