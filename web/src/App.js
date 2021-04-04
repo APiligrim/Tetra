@@ -10,6 +10,7 @@ import Recycle from './pages/recycle';
 
 import TableItems from './pages/tableItems';
 import AddParts from './pages/addParts';
+import Timeline from './pages/timeline';
 import AddProducts from './pages/addProducts';
 import logo from './assets/img/logo2.svg';
 
@@ -39,6 +40,7 @@ const App = props => {
           <Route exact path="/login" component={Login} />
           <Route exact path="/recycle" component={Recycle} />
           <Route exact path="/table-items" component={tableItems} />
+          <Route exact path="/timeline" component={Timeline} />
           <Route exact path="/addParts" component={AddParts} />
           <Route exact path="/addProducts" component={AddProducts} />
         </Switch>

@@ -29,15 +29,15 @@ const Recycle = props => {
         justifyContent="space-between"
         width="85%"
         alignItems="center"
-        className='box-container arrange-to-top' 
+        className='box-container arrange-to-top'
       >
         <Flex
           width="100%"
           alignItems="center"
           justifyContent="center"
           marginBottom={4}
-          
-          
+
+
         >
           <Flex width="100%" justifyContent="center" >
           <Heading padding={2} className="title-bk" fontSize="2xl" >
