@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`rendering does not render children when not open 1`] = `
-<div
-  lang="gr"
-/>
-`;

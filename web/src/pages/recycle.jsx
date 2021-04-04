@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom';
 import fetchApi from '../services/fetch-custom';
 import { Heading, Flex, Text, Image, Button } from '@chakra-ui/react';
 import items from './items';
+import recycleBackground from '../assets/img/recyclebk.png'
+
 import '../assets/scroll.css';
 import '../assets/overall.css';
 
@@ -16,6 +18,7 @@ const Recycle = props => {
   const { recycleItems } = state;
   return (
     <Flex justifyContent="center" alignItems="center">
+      <img src={recycleBackground}/>
       <Flex
         textAlign="center"
         fontSize="md"
@@ -26,7 +29,7 @@ const Recycle = props => {
         justifyContent="space-between"
         width="85%"
         alignItems="center"
-        className='box-container' 
+        className='box-container arrange-to-top' 
       >
         <Flex
           width="100%"
@@ -36,9 +39,11 @@ const Recycle = props => {
           
           
         >
-          <Heading fontSize="2xl" width="100%">
-            Items Up For Recycling.
+          <Flex width="100%" justifyContent="center" >
+          <Heading padding={2} className="title-bk" fontSize="2xl" >
+            Items Up For Recycling
           </Heading>
+          </Flex>
           <Button  className='green-btn' size="md" alignSelf="flex-end" colorScheme="cyan">
             Dashboard
           </Button>
