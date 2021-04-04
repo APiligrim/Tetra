@@ -23,10 +23,15 @@ import {
   Checkbox,
   useToast,
 } from '@chakra-ui/react';
-import items from './items';
+import items from './items2';
 import '../assets/scroll.css';
 
 const AddParts = ({ history }) => {
+  const [state, setState] = useState({
+    recycleItems: items,
+  });
+
+  const { recycleItems } = state;
   const toast = useToast();
   const createItem = () => {
     toast({
@@ -41,7 +46,7 @@ const AddParts = ({ history }) => {
   };
   return (
     <Flex justifyContent="center" alignItems="center">
-      <img src={bkTable} />
+      <img src={bkTable} alt="bg" />
       <Flex
         textAlign="center"
         fontSize="md"
@@ -80,62 +85,9 @@ const AddParts = ({ history }) => {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  <Tr>
-                    <Td>
-                      <Checkbox colorScheme="green" />
-                    </Td>
-                    <Td>4414</Td>
-                    <Td>Leather</Td>
-                    <Td>Black</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>
-                      <Checkbox colorScheme="green" />
-                    </Td>
-                    <Td>4414</Td>
-                    <Td>Leather</Td>
-                    <Td>Black</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>
-                      <Checkbox colorScheme="green" />
-                    </Td>
-                    <Td>4414</Td>
-                    <Td>Leather</Td>
-                    <Td>Black</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>
-                      <Checkbox colorScheme="green" />
-                    </Td>
-                    <Td>4414</Td>
-                    <Td>Leather</Td>
-                    <Td>Black</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>
-                      <Checkbox colorScheme="green" />
-                    </Td>
-                    <Td>4414</Td>
-                    <Td>Leather</Td>
-                    <Td>Black</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>
-                      <Checkbox colorScheme="green" />
-                    </Td>
-                    <Td>4414</Td>
-                    <Td>Leather</Td>
-                    <Td>Black</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>
-                      <Checkbox colorScheme="green" />
-                    </Td>
-                    <Td>4414</Td>
-                    <Td>Leather</Td>
-                    <Td>Black</Td>
-                  </Tr>
+                  {recycleItems.map((e, i) => {
+                    return <Row {...e} />;
+                  })}
                 </Tbody>
               </Table>
               <Flex
@@ -188,6 +140,18 @@ const AddParts = ({ history }) => {
   );
 };
 
+const Row = ({ code, name, color }) => {
+  return (
+    <Tr>
+      <Td>
+        <Checkbox colorScheme="green" />
+      </Td>
+      <Td>{code}</Td>
+      <Td>{name}</Td>
+      <Td>{color}</Td>
+    </Tr>
+  );
+};
 const Card = ({ ssn, name, url, deadline }) => {
   return (
     <Flex bg="gray.700" p={4} flexDirection="column" width="30%" rounded="md">

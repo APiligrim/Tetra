@@ -16,7 +16,7 @@ const letters = [
 const frequency = d => d.frequency;
 const getLetterFrequencyColor = scaleOrdinal({
   domain: letters.map(l => l.letter),
-  range: ['rgba(93,30,91,1)', 'rgba(93,30,91,0.6)', 'rgba(93,30,91,0.4)'],
+  range: ['#a5e887', '#00ab95'],
 });
 const defaultMargin = { top: 20, right: 20, bottom: 20, left: 20 };
 export default function PieChart({ width, height, margin = defaultMargin }) {
