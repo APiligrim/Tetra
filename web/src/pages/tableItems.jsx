@@ -19,16 +19,32 @@ import {
   Th,
   Td,
   Checkbox,
+  useToast,
 } from '@chakra-ui/react';
 import items from './items';
 import '../assets/scroll.css';
-import '../assets/overall.css'
+import '../assets/overall.css';
 
-const Row = props => {
+const Row = ({ match, history }) => {
   const [state, setState] = useState({
     tableItems: items,
   });
+  const toast = useToast();
   const { tableItems } = state;
+  const { params } = match;
+
+  const fulfill = () => {
+    toast({
+      position: 'bottom-left',
+      title: 'Success',
+      description: 'Products sent over!',
+      status: 'success',
+      duration: 1000,
+      isClosable: true,
+    });
+    history.push('/dashboard');
+  };
+
   return (
     <Flex justifyContent="center" alignItems="center">
       <Flex
@@ -42,7 +58,7 @@ const Row = props => {
         width="85%"
         alignItems="center"
         height="76vh"
-                  className="box-container"
+        className="box-container"
       >
         <Flex
           width="100%"
@@ -51,7 +67,7 @@ const Row = props => {
           flexDirection="column"
         >
           <Heading fontSize="2xl" mb={10}>
-           Product Inventory
+            Product Inventory - {params.org}
           </Heading>
           <Flex
             justifyContent="space-evenly"
@@ -71,31 +87,39 @@ const Row = props => {
                   </Tr>
                 </Thead>
                 <Tbody>
-                    {tableItems.map((element, index)=> <ItemRow {...element}/>)}   
+                  {tableItems.map((element, index) => (
+                    <ItemRow {...element} />
+                  ))}
                 </Tbody>
               </Table>
-            
             </Flex>
           </Flex>
         </Flex>
-        <Button className="yellow-btn" colorScheme="green" size="lg">Fulfill</Button>
+        <Button
+          className="yellow-btn"
+          colorScheme="green"
+          size="lg"
+          onClick={fulfill}
+        >
+          FULFILL
+        </Button>
       </Flex>
     </Flex>
   );
 };
 
-const ItemRow = ({ssn, name, collection,price, color, })=>{
-    return (
-        <Tr>
-            <Td>
-            <Checkbox colorScheme="green" />
-            </Td>
-            <Td>{ssn}</Td>
-            <Td>{name}</Td>
-            <Td>{color}</Td>
-            <Td>{collection}</Td>
-            <Td>{price}</Td>
-        </Tr>
-    );
-}
+const ItemRow = ({ ssn, name, collection, price, color }) => {
+  return (
+    <Tr>
+      <Td>
+        <Checkbox colorScheme="green" />
+      </Td>
+      <Td>{ssn}</Td>
+      <Td>{name}</Td>
+      <Td>{color}</Td>
+      <Td>{collection}</Td>
+      <Td>{price}</Td>
+    </Tr>
+  );
+};
 export default withRouter(Row);

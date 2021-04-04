@@ -13,18 +13,43 @@ import {
   InputGroup,
   InputLeftAddon,
   Select,
+  useToast,
 } from '@chakra-ui/react';
 import items from './items';
 import '../assets/scroll.css';
 
-const AddParts = props => {
+const AddParts = ({ history }) => {
+  const toast = useToast();
   const [state, setState] = useState({
     recycleItems: items,
   });
   const { recycleItems } = state;
+
+  const addItem = () => {
+    toast({
+      position: 'bottom-left',
+      title: 'Success',
+      description: 'Added successfully!',
+      status: 'success',
+      duration: 1000,
+      isClosable: true,
+    });
+  };
+
+  const sendItem = () => {
+    toast({
+      position: 'bottom-left',
+      title: 'Success',
+      description: 'Sent successfully!',
+      status: 'success',
+      duration: 1000,
+      isClosable: true,
+    });
+    history.push('/dashboard');
+  };
   return (
     <Flex justifyContent="center" alignItems="center">
-      <img src={bkTable} />
+      <img src={bkTable} alt="bg" />
       <Flex
         textAlign="center"
         fontSize="md"
@@ -73,7 +98,12 @@ const AddParts = props => {
                   <Input placeholder="Part Color" />
                 </InputGroup>
               </Stack>
-              <Button className="yellow-btn" colorScheme="green" mt={5}>
+              <Button
+                className="yellow-btn"
+                colorScheme="green"
+                mt={5}
+                onClick={addItem}
+              >
                 ADD
               </Button>
             </Flex>
@@ -97,9 +127,9 @@ const AddParts = props => {
                   <option value="option3">1106 - Cotton, White</option>
                 </Select>
                 <Select placeholder="Select Factory">
-                  <option value="option1">XU44 - Maine, US</option>
-                  <option value="option2">VE63 - Tokyo, Japan</option>
-                  <option value="option3">O44X - Barcelona, Spain</option>
+                  <option value="option1">XU44 - New York, USA</option>
+                  <option value="option2">VE63 - San Francisco, USA</option>
+                  <option value="option3">O44X - Austin, USA</option>
                 </Select>
                 <Select placeholder="Select Shipper">
                   <option value="option1">SHP2 - ShipIt, NYC</option>
@@ -107,7 +137,13 @@ const AddParts = props => {
                   <option value="option3">TXW4 - Texan, TX</option>
                 </Select>
               </Stack>
-              <Button className="yellow-btn" colorScheme="green">SEND</Button>
+              <Button
+                className="yellow-btn"
+                colorScheme="green"
+                onClick={sendItem}
+              >
+                SEND
+              </Button>
             </Flex>
           </Flex>
         </Flex>

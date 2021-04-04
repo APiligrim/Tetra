@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
 import { Button, Box, Heading, Spacer, Flex, Text } from '@chakra-ui/react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 //Style imports
 import './assets/overall.css';
+import logo from './assets/img/logo2.svg';
 import homeBackground from './assets/img/tetra-web.gif';
 // Page imports
 import Login from './pages/login';
 import Recycle from './pages/recycle';
-
 import TableItems from './pages/tableItems';
+import Dashboard from './pages/dashboard';
 import AddParts from './pages/addParts';
 import Timeline from './pages/timeline';
 import AddProducts from './pages/addProducts';
-import logo from './assets/img/logo2.svg';
+import Logout from './pages/logout';
+import Graph from './pages/graph';
+import Graph2 from './pages/graph2';
+import tableItems from './pages/tableItems'
 
 // Component imports
 import Fonts from './components/Fonts';
-import ResRoute from './components/ResRoute';
-import tableItems from './pages/tableItems';
 
 const App = props => {
+  const [screens, setScreens] = useState([]);
   let user = JSON.parse(localStorage.getItem('app-user'));
   if (!user) user = null;
   const [currentUser, setCurrentUser] = useState(user);
@@ -33,16 +36,43 @@ const App = props => {
           <Route
             exact
             path="/"
+            component={() => {
+              return currentUser ? (
+                <Redirect to="/dashboard" />
+              ) : (
+                <img
+                  src={homeBackground}
+                  alt="home-screen"
+                  className="home-screen"
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/login"
+            component={() => <Login setCurrentUser={setCurrentUser} />}
+          />
+          <Route
+            exact
+            path="/dashboard"
             component={() => (
-              <img src={homeBackground} className="home-screen" />
+              <Dashboard screens={screens} setScreens={setScreens} />
             )}
           />
-          <Route exact path="/login" component={Login} />
           <Route exact path="/recycle" component={Recycle} />
           <Route exact path="/table-items" component={tableItems} />
           <Route exact path="/timeline" component={Timeline} />
+          <Route exact path="/graph" component={Graph} />
+          <Route exact path="/graph2" component={Graph2} />
+          <Route exact path="/tableItems/:org" component={TableItems} />
           <Route exact path="/addParts" component={AddParts} />
           <Route exact path="/addProducts" component={AddProducts} />
+          <Route
+            exact
+            path="/logout"
+            component={() => <Logout setCurrentUser={setCurrentUser} />}
+          />
         </Switch>
       </Box>
     </>
@@ -59,17 +89,42 @@ const Nav = ({ history, currentUser }) => {
           fontFamily="Allan"
           cursor="pointer"
         >
-          <img className="logo" src={logo} />
+          <img className="logo" alt="logo" src={logo} />
         </Heading>
       </Box>
       <Spacer />
       {currentUser ? (
         // Signed In User
         <Box>
-          <Button mr="1rem" onClick={() => history.push('/profile')}>
+          <Button
+            mr="1rem"
+            colorScheme="yellow"
+            variant="outline"
+            onClick={() => history.push('/graph')}
+          >
+            Ratio
+          </Button>
+          <Button
+            mr="1rem"
+            colorScheme="yellow"
+            variant="outline"
+            onClick={() => history.push('/graph2')}
+          >
+            Stats
+          </Button>
+          <Button
+            mr="1rem"
+            colorScheme="yellow"
+            variant="outline"
+            onClick={() => history.push('/profile')}
+          >
             Profile
           </Button>
-          <Button mr="1rem" onClick={() => history.push('/logout')}>
+          <Button
+            mr="1rem"
+            colorScheme="yellow"
+            onClick={() => history.push('/logout')}
+          >
             Log out
           </Button>
         </Box>
