@@ -20,6 +20,7 @@ import Graph2 from './pages/graph2';
 import Fonts from './components/Fonts';
 
 const App = props => {
+  const [screens, setScreens] = useState([]);
   let user = JSON.parse(localStorage.getItem('app-user'));
   if (!user) user = null;
   const [currentUser, setCurrentUser] = useState(user);
@@ -50,7 +51,13 @@ const App = props => {
             path="/login"
             component={() => <Login setCurrentUser={setCurrentUser} />}
           />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Route
+            exact
+            path="/dashboard"
+            component={() => (
+              <Dashboard screens={screens} setScreens={setScreens} />
+            )}
+          />
           <Route exact path="/recycle" component={Recycle} />
           <Route exact path="/graph" component={Graph} />
           <Route exact path="/graph2" component={Graph2} />

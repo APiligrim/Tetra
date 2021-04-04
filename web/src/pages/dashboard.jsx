@@ -27,9 +27,9 @@ import items from './items';
 import '../assets/scroll.css';
 import Background from '../assets/img/background-table.png';
 
-const Dashboard = ({ history }) => {
-  const toast = useToast();
+const Dashboard = ({ history, screens, setScreens }) => {
   const moveTo = org => {
+    setScreens(screens => [...screens, org]);
     if (org === 'Supplier') {
       history.push(`/addParts`);
     } else if (org === 'Factory') {
@@ -43,7 +43,7 @@ const Dashboard = ({ history }) => {
 
   return (
     <Flex justifyContent="center" alignItems="center">
-      <img src={Background}/>
+      <img alt="bg" src={Background} />
       <Flex
         textAlign="center"
         fontSize="md"
@@ -55,7 +55,7 @@ const Dashboard = ({ history }) => {
         width="85%"
         alignItems="center"
         height="76vh"
-        className='arrange-to-top'
+        className="arrange-to-top"
       >
         <Flex
           width="100%"
@@ -72,27 +72,42 @@ const Dashboard = ({ history }) => {
             flexDirection="column"
           >
             <Flex justifyContent="space-evenly" mb={100} alignItems="center">
-              <DashboardButton fn={() => moveTo('Supplier')} name="Supplier" />
+              <DashboardButton
+                fn={() => moveTo('Supplier')}
+                name="Supplier"
+                screens={screens}
+              />
               <ArrowForwardIcon fontSize={30} />
-              <DashboardButton fn={() => moveTo('Factory')} name="Factory" />
+              <DashboardButton
+                fn={() => moveTo('Factory')}
+                name="Factory"
+                screens={screens}
+              />
               <ArrowForwardIcon fontSize={30} />
-              <DashboardButton fn={() => moveTo('Shipping')} name="Shipping" />
+              <DashboardButton
+                fn={() => moveTo('Shipping')}
+                name="Shipping"
+                screens={screens}
+              />
             </Flex>
             <Flex justifyContent="space-evenly" mb={100} alignItems="center">
               <DashboardButton
                 fn={() => moveTo('Warehouse')}
                 name="Warehouse"
+                screens={screens}
               />
               <ArrowForwardIcon fontSize={30} />
               <DashboardButton
                 fn={() => moveTo('Retail Store')}
                 name="Retail Store"
+                screens={screens}
               />
               <ArrowForwardIcon fontSize={30} />
 
               <DashboardButton
                 fn={() => moveTo('Recycle Team')}
                 name="Recycle Team"
+                screens={screens}
               />
             </Flex>
             <DashboardButton
@@ -100,6 +115,7 @@ const Dashboard = ({ history }) => {
               name="Transportation"
               alignSelf="center"
               width="15vw"
+              screens={screens}
             />
           </Flex>
         </Flex>
@@ -108,45 +124,24 @@ const Dashboard = ({ history }) => {
   );
 };
 
-const DashboardButton = ({ name, fn, ...props }) => (
-  <Button
-    className="yellow-btn"
-    colorScheme="green"
-    onClick={fn}
-    size="lg"
-    width="10vw"
-    {...props}
-  >
-    {name}
-  </Button>
-);
+const DashboardButton = ({ name, fn, screens, ...props }) => {
+  let color = { backgroundColor: 'yellow' };
+  if (screens.includes(name)) {
+    color['backgroundColor'] = 'green.400';
+  }
 
-const Card = ({ ssn, name, url, deadline }) => {
   return (
-    <Flex bg="gray.700" p={4} flexDirection="column" width="30%" rounded="md">
-      <Image height={220} src={url} alt={name} />
-      <Flex width="100%" textAlign="start" marginTop={4} flexDirection="column">
-        <Heading as="h5" size="sm" color="gray.400">
-          {ssn}
-        </Heading>
-        <Flex
-          width="100%"
-          justifyContent="space-between"
-          alignItems="baseline"
-          my={2}
-        >
-          <Heading isTruncated as="h3" size="lg">
-            {name}
-          </Heading>
-          <Heading as="h5" size="md">
-            {deadline}
-          </Heading>
-        </Flex>
-        <Button colorScheme="red" width="60%" alignSelf="center" mt={2}>
-          RECYCLE
-        </Button>
-      </Flex>
-    </Flex>
+    <Button
+      colorScheme="green"
+      onClick={fn}
+      size="lg"
+      width="10vw"
+      {...color}
+      {...props}
+    >
+      {name}
+    </Button>
   );
 };
+
 export default withRouter(Dashboard);
