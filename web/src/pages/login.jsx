@@ -38,7 +38,7 @@ const Login = props => {
       toast({
         position: 'bottom-left',
         title: 'Success',
-        description: 'Welcome back.',
+        description: 'Welcome back',
         status: 'success',
         duration: 1000,
         isClosable: true,
@@ -70,7 +70,7 @@ const Login = props => {
   const { username, password } = state;
   return (
     <Flex justifyContent="center" alignItems="center" height="70vh">
-      <img src={loginBackground} alt="bg" />
+      <img src={loginBackground} />
       <div className="arrange-to-top">
         <Flex
           textAlign="center"
@@ -82,7 +82,9 @@ const Login = props => {
           height="45vh"
           justifyContent="space-between"
         >
-          <Heading fontSize="2xl">Welcome Back.</Heading>
+          <Heading className="title-bk" fontSize="2xl">
+            Welcome Back
+          </Heading>
           <Input
             placeholder="Username"
             value={username}
