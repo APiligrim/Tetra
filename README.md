@@ -1,4 +1,4 @@
-# HackPrinceton Hackathon Submission 
+#### HackPrinceton Hackathon Submission 
 
 <!-- PROJECT LOGO -->
 <br />
@@ -28,13 +28,11 @@
   </ol>
 </details>
 
-![License](https://img.shields.io/github/license/Tetra/Tetra?style=for-the-badge)
-
 
 <!-- ABOUT THE PROJECT -->
 # About The Project ✨🗺️ 
 
-This project 
+Tetra is a sustainable supply chain managment system that helps clothing brands have clear trasnperency in each stage of development and improves recycling practices.
 
 Some of the completed user stories are:
 * As an admin, I am able to track which product to recycle
@@ -46,7 +44,7 @@ Some of the completed user stories are:
 ## Screenshots of the web app
 
 <p align="center">
-    <img src="" alt="Logo">
+    <img src="https://media.giphy.com/media/xdmBb3bHUH6rhCZHCN/giphy.gif" alt="main">
 <p/>
 
 
@@ -93,15 +91,11 @@ This section will work you through how you can get started with the project.
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
 
 ## Contributors
 
-1. Tayeeb Hassan - github
-2. Krishna - github
-3. Anastasiya Uraleva - github
-
-
+1. Tayeeb Hassan - [github](https://github.com/flozender)
+2. Krishna - [github](https://github.com/JethroGibbsN)
+3. Anastasiya Uraleva - [github](https://github.com/APiligrim)
 
