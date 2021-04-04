@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import fetchApi from '../services/fetch-custom';
+import '../assets/overall.css'
 import {
   Heading,
   Flex,
@@ -106,7 +107,7 @@ const AddParts = props => {
                   </Tr>
                   <Tr>
                     <Td>
-                      <Checkbox colorScheme="green"/>
+                      <Checkbox  colorScheme="green"/>
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -155,7 +156,7 @@ const AddParts = props => {
                     <Input placeholder="Product Collection" />
                   </InputGroup>
                 </Stack>
-                <Button colorScheme="green" mt={5}>
+                <Button className="yellow-btn" colorScheme="green" mt={5}>
                   CREATE
                 </Button>
               </Flex>

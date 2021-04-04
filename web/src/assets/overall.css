@@ -1,0 +1,48 @@
+.box-container{
+    border-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    background-image: url('./img/backgroundParticles.svg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+button.yellow-btn{
+    background-color: yellow;
+    box-shadow: 0px 15px 20px rgba(173, 173, 4, 0.219);
+}
+
+button.yellow-btn:hover {
+    background-color: #00CC76;
+    box-shadow: 0px 15px 20px #00cc7731;
+}
+
+button.green-btn{
+    background-color: #00CC76;
+    box-shadow: 0px 15px 20px #00cc771c;
+}
+
+.css-f4r5hg.css-drg3l9 {
+     border-color: yellow;
+     border-style: solid;
+     border: 2px solid yellow;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.arrange-to-top{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo{
+    z-index: 999;
+    position: relative;
+}

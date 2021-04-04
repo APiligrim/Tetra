@@ -70,7 +70,7 @@ const AddParts = props => {
                   <Input placeholder="Part Color" />
                 </InputGroup>
               </Stack>
-              <Button colorScheme="green" mt={5}>
+              <Button className="yellow-btn" colorScheme="green" mt={5}>
                 ADD
               </Button>
             </Flex>
@@ -104,7 +104,7 @@ const AddParts = props => {
                   <option value="option3">TXW4 - Texan, TX</option>
                 </Select>
               </Stack>
-              <Button colorScheme="green">SEND</Button>
+              <Button className="yellow-btn" colorScheme="green">SEND</Button>
             </Flex>
           </Flex>
         </Flex>

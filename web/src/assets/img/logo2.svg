@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188.994" height="74" viewBox="0 0 188.994 74">
+  <defs>
+    <filter id="Path_33" x="131.716" y="1.085" width="45.147" height="63.334" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#12aa95"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_34" x="138.756" y="10.935" width="50.238" height="53.485" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#16cc76"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_44" data-name="Group 44" transform="translate(0 0.285)">
+    <text id="Tetra" transform="translate(0 50.714)" fill="#fff" font-size="52" font-family="MyanmarMN-Bold, Myanmar MN" font-weight="700"><tspan x="0" y="0">Tetra</tspan></text>
+    <g id="leaf" transform="translate(140.716 6.8)">
+      <g transform="matrix(1, 0, 0, 1, -140.72, -7.09)" filter="url(#Path_33)">
+        <path id="Path_33-2" data-name="Path 33" d="M41.241,45.334,36.094,34.691a18.937,18.937,0,0,1,4.944-22.807A114.247,114.247,0,0,0,52.57.994L53.477,0l2.109,2.787a36.259,36.259,0,0,1,5.762,10.8Z" transform="translate(106.51 7.09)" fill="#00aa95"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -140.72, -7.09)" filter="url(#Path_34)">
+        <path id="Path_34-2" data-name="Path 34" d="M145.145,114.661l-.686-3.427c-3.388,7.987-12.08,12.231-17.061,17.743a135.007,135.007,0,0,0-13.691,17.743h5.158C141.792,146.719,148.463,131.245,145.145,114.661Z" transform="translate(34.05 -94.3)" fill="#00cc76"/>
+      </g>
+      <path id="Path_35" data-name="Path 35" d="M144.459,111.234l-1.25.5c-3.079,1.232-6.217,2.3-9.4,3.237h0q-2.844.839-5.726,1.545A18.937,18.937,0,0,0,113.706,134.9v11.823s21.438-13.53,30.753-35.485Z" transform="translate(-106.666 -101.385)" fill="#a5e887"/>
+    </g>
+  </g>
+</svg>

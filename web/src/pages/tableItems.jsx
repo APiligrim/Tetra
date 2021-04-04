@@ -22,6 +22,7 @@ import {
 } from '@chakra-ui/react';
 import items from './items';
 import '../assets/scroll.css';
+import '../assets/overall.css'
 
 const Row = props => {
   const [state, setState] = useState({
@@ -76,7 +77,7 @@ const Row = props => {
             </Flex>
           </Flex>
         </Flex>
-        <Button colorScheme="green" size="lg">Fulfill</Button>
+        <Button className="yellow-btn" colorScheme="green" size="lg">Fulfill</Button>
       </Flex>
     </Flex>
   );

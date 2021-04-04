@@ -4,6 +4,7 @@ import fetchApi from '../services/fetch-custom';
 import { Heading, Flex, Text, Image, Button } from '@chakra-ui/react';
 import items from './items';
 import '../assets/scroll.css';
+import '../assets/overall.css';
 
 const Recycle = props => {
   const [state, setState] = useState({
@@ -25,17 +26,20 @@ const Recycle = props => {
         justifyContent="space-between"
         width="85%"
         alignItems="center"
+        className='box-container' 
       >
         <Flex
           width="100%"
           alignItems="center"
           justifyContent="center"
           marginBottom={4}
+          
+          
         >
           <Heading fontSize="2xl" width="100%">
             Items Up For Recycling.
           </Heading>
-          <Button size="md" alignSelf="flex-end" colorScheme="cyan">
+          <Button  className='green-btn' size="md" alignSelf="flex-end" colorScheme="cyan">
             Dashboard
           </Button>
         </Flex>
@@ -59,7 +63,7 @@ const Recycle = props => {
 
 const Card = ({ ssn, name, url, deadline }) => {
   return (
-    <Flex bg="gray.700" p={4} flexDirection="column" width="30%" rounded="md">
+    <Flex  bg="gray.700" p={4} flexDirection="column" width="30%" rounded="md">
       <Image height={220} src={url} alt={name} />
       <Flex width="100%" textAlign="start" marginTop={4} flexDirection="column">
         <Heading as="h5" size="sm" color="gray.400">
@@ -78,7 +82,7 @@ const Card = ({ ssn, name, url, deadline }) => {
             {deadline}
           </Heading>
         </Flex>
-        <Button colorScheme="red" width="60%" alignSelf="center" mt={2}>
+        <Button className='yellow-btn' colorScheme="green" width="60%" alignSelf="center" mt={2}>
           RECYCLE
         </Button>
       </Flex>
