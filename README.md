@@ -17,6 +17,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -30,7 +31,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-# About The Project ✨🗺️ 
+# About The Project ✨♻️
 
 We were inspired to create this project after reading ongoing [**news**](https://www.businessoffashion.com/articles/luxury/luxury-brands-burn-unsold-goods-what-should-they-do-instead) about famous luxury clothing brands yearly burning their unsold inventories. It was very surpising to learn about the number of high quality goods these brands have burned when they could have recycled them or kept a better track of their supply chain in order to prevent the result. These brands also have more resources (which is why they are luxury brands) yet this problem keeps persisting which partly roots from a bigger issue of current supply chains not being sustainable enough to help brands improve their practices. 
 
@@ -39,11 +40,10 @@ We were inspired to create this project after reading ongoing [**news**](https:/
 Tetra's technical backbone uses blockchain for business using Ethereum and Web3.js. This allows each product in the inventory to have a unique ID that can be traced and tracked to see which stages in the supply chain it has gone through (example: shipping stage, factory, supply). It will also show what types of materials this product is made out of. If this item is unsold, admins can send the item to a recycling facility. Once a product gets recycled, users of Tetra can also trace the history of the different parts that made up that product got recycled into.
 
 Some of the completed user stories are:
-* 
 * As an admin, I am able to track which product to recycle
 * As an admin, I am able to add a new product to the chain 
 * As an admin, I am able to add or ship new materials (that are parts of the product) to the chain 
-* As an admin, I am able to see a history/timeline of where the components of a product have been recycled to
+* As a customer, I am able to see a history/timeline of where the components of a product have been recycled to
 
 
 ## Screenshots of the web app
