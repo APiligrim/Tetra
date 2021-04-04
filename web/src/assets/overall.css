@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 .box-container{
-    border-color: yellow;
+    border-color: #E7E63D;
     border-style: solid;
     border-width: 2px;
-    background-image: url('./img/backgroundParticles.svg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    box-shadow: 0px 15px 20px #e7e73d54;
+}
+   
+.title-bk{
+/*  border-radius: 8px;
+    background-color: #00CC76;
+    box-shadow: 0px 15px 20px #01885028; */
 }
 
 button.yellow-btn{
@@ -24,20 +27,15 @@ button.green-btn{
     box-shadow: 0px 15px 20px #00cc771c;
 }
 
-.css-f4r5hg.css-drg3l9 {
-     border-color: yellow;
-     border-style: solid;
-     border: 2px solid yellow;
-}
-
 img {
     max-width: 100%;
     height: auto;
+    margin-top: -1%;
 }
 
 .arrange-to-top{
     position: absolute;
-    top: 50%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

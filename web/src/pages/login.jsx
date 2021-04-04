@@ -38,7 +38,7 @@ const Login = props => {
       toast({
         position: 'bottom-left',
         title: 'Success',
-        description: 'Welcome back.',
+        description: 'Welcome back',
         status: 'success',
         duration: 9000,
         isClosable: true,
@@ -104,7 +104,7 @@ const Login = props => {
         height="45vh"
         justifyContent="space-between"
       >
-        <Heading fontSize="2xl">Welcome Back.</Heading>
+        <Heading className="title-bk" fontSize="2xl">Welcome Back</Heading>
         <Input
           placeholder="Username"
           value={username}

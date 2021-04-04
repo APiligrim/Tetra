@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import fetchApi from '../services/fetch-custom';
+import bkTable from '../assets/img/background-table.png';
 import '../assets/overall.css'
 import {
   Heading,
@@ -28,6 +29,7 @@ const AddParts = props => {
 
   return (
     <Flex justifyContent="center" alignItems="center">
+      <img src={bkTable} />
       <Flex
         textAlign="center"
         fontSize="md"
@@ -39,6 +41,7 @@ const AddParts = props => {
         width="85%"
         alignItems="center"
         height="76vh"
+        className='box-container arrange-to-top'
       >
         <Flex
           width="100%"

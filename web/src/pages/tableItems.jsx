@@ -42,6 +42,7 @@ const Row = props => {
         width="85%"
         alignItems="center"
         height="76vh"
+                  className="box-container"
       >
         <Flex
           width="100%"
