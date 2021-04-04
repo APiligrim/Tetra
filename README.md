@@ -50,10 +50,6 @@ Some of the completed user stories are:
 ## Screenshots of the web app
 
 <p align="center">
-    <img src="https://media.giphy.com/media/X3IWK1HsoFX3mTQiV6/giphy.gif" alt="main">
-<p/>
-
-<p align="center">
     <img src="https://media.giphy.com/media/x5JzFi10ozaOQ1Ef2Y/giphy.gif" alt="main">
 <p/>
 
