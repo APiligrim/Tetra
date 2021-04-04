@@ -12,15 +12,40 @@ import {
   InputGroup,
   InputLeftAddon,
   Select,
+  useToast,
 } from '@chakra-ui/react';
 import items from './items';
 import '../assets/scroll.css';
 
-const AddParts = props => {
+const AddParts = ({ history }) => {
+  const toast = useToast();
   const [state, setState] = useState({
     recycleItems: items,
   });
   const { recycleItems } = state;
+
+  const addItem = () => {
+    toast({
+      position: 'bottom-left',
+      title: 'Success',
+      description: 'Added successfully!',
+      status: 'success',
+      duration: 1000,
+      isClosable: true,
+    });
+  };
+
+  const sendItem = () => {
+    toast({
+      position: 'bottom-left',
+      title: 'Success',
+      description: 'Sent successfully!',
+      status: 'success',
+      duration: 1000,
+      isClosable: true,
+    });
+    history.push('/dashboard');
+  };
   return (
     <Flex justifyContent="center" alignItems="center">
       <Flex
@@ -70,7 +95,12 @@ const AddParts = props => {
                   <Input placeholder="Part Color" />
                 </InputGroup>
               </Stack>
-              <Button className="yellow-btn" colorScheme="green" mt={5}>
+              <Button
+                className="yellow-btn"
+                colorScheme="green"
+                mt={5}
+                onClick={addItem}
+              >
                 ADD
               </Button>
             </Flex>
@@ -104,7 +134,13 @@ const AddParts = props => {
                   <option value="option3">TXW4 - Texan, TX</option>
                 </Select>
               </Stack>
-              <Button className="yellow-btn" colorScheme="green">SEND</Button>
+              <Button
+                className="yellow-btn"
+                colorScheme="green"
+                onClick={sendItem}
+              >
+                SEND
+              </Button>
             </Flex>
           </Flex>
         </Flex>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import fetchApi from '../services/fetch-custom';
-import '../assets/overall.css'
+import '../assets/overall.css';
 import {
   Heading,
   Flex,
@@ -20,12 +20,24 @@ import {
   Th,
   Td,
   Checkbox,
+  useToast,
 } from '@chakra-ui/react';
 import items from './items';
 import '../assets/scroll.css';
 
-const AddParts = props => {
-
+const AddParts = ({ history }) => {
+  const toast = useToast();
+  const createItem = () => {
+    toast({
+      position: 'bottom-left',
+      title: 'Success',
+      description: 'Created successfully!',
+      status: 'success',
+      duration: 1000,
+      isClosable: true,
+    });
+    history.push('/dashboard');
+  };
   return (
     <Flex justifyContent="center" alignItems="center">
       <Flex
@@ -67,7 +79,7 @@ const AddParts = props => {
                 <Tbody>
                   <Tr>
                     <Td>
-                      <Checkbox colorScheme="green"/>
+                      <Checkbox colorScheme="green" />
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -75,7 +87,7 @@ const AddParts = props => {
                   </Tr>
                   <Tr>
                     <Td>
-                      <Checkbox colorScheme="green"/>
+                      <Checkbox colorScheme="green" />
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -83,7 +95,7 @@ const AddParts = props => {
                   </Tr>
                   <Tr>
                     <Td>
-                      <Checkbox colorScheme="green"/>
+                      <Checkbox colorScheme="green" />
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -91,7 +103,7 @@ const AddParts = props => {
                   </Tr>
                   <Tr>
                     <Td>
-                      <Checkbox colorScheme="green"/>
+                      <Checkbox colorScheme="green" />
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -99,7 +111,7 @@ const AddParts = props => {
                   </Tr>
                   <Tr>
                     <Td>
-                      <Checkbox colorScheme="green"/>
+                      <Checkbox colorScheme="green" />
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -107,7 +119,7 @@ const AddParts = props => {
                   </Tr>
                   <Tr>
                     <Td>
-                      <Checkbox  colorScheme="green"/>
+                      <Checkbox colorScheme="green" />
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -115,7 +127,7 @@ const AddParts = props => {
                   </Tr>
                   <Tr>
                     <Td>
-                      <Checkbox colorScheme="green"/>
+                      <Checkbox colorScheme="green" />
                     </Td>
                     <Td>4414</Td>
                     <Td>Leather</Td>
@@ -156,7 +168,12 @@ const AddParts = props => {
                     <Input placeholder="Product Collection" />
                   </InputGroup>
                 </Stack>
-                <Button className="yellow-btn" colorScheme="green" mt={5}>
+                <Button
+                  className="yellow-btn"
+                  colorScheme="green"
+                  mt={5}
+                  onClick={createItem}
+                >
                   CREATE
                 </Button>
               </Flex>
