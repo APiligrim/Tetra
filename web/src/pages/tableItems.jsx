@@ -58,7 +58,7 @@ const Row = ({ match, history }) => {
         width="85%"
         alignItems="center"
         height="76vh"
-                  className="box-container"
+        className="box-container"
       >
         <Flex
           width="100%"
@@ -101,7 +101,7 @@ const Row = ({ match, history }) => {
           size="lg"
           onClick={fulfill}
         >
-          Fulfill
+          FULFILL
         </Button>
       </Flex>
     </Flex>

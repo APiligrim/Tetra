@@ -49,7 +49,7 @@ const AddParts = ({ history }) => {
   };
   return (
     <Flex justifyContent="center" alignItems="center">
-      <img src={bkTable} />
+      <img src={bkTable} alt="bg" />
       <Flex
         textAlign="center"
         fontSize="md"
@@ -127,9 +127,9 @@ const AddParts = ({ history }) => {
                   <option value="option3">1106 - Cotton, White</option>
                 </Select>
                 <Select placeholder="Select Factory">
-                  <option value="option1">XU44 - Maine, US</option>
-                  <option value="option2">VE63 - Tokyo, Japan</option>
-                  <option value="option3">O44X - Barcelona, Spain</option>
+                  <option value="option1">XU44 - New York, USA</option>
+                  <option value="option2">VE63 - San Francisco, USA</option>
+                  <option value="option3">O44X - Austin, USA</option>
                 </Select>
                 <Select placeholder="Select Shipper">
                   <option value="option1">SHP2 - ShipIt, NYC</option>

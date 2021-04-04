@@ -13,6 +13,8 @@ import Dashboard from './pages/dashboard';
 import AddParts from './pages/addParts';
 import AddProducts from './pages/addProducts';
 import Logout from './pages/logout';
+import Graph from './pages/graph';
+import Graph2 from './pages/graph2';
 
 // Component imports
 import Fonts from './components/Fonts';
@@ -50,6 +52,8 @@ const App = props => {
           />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/recycle" component={Recycle} />
+          <Route exact path="/graph" component={Graph} />
+          <Route exact path="/graph2" component={Graph2} />
           <Route exact path="/tableItems/:org" component={TableItems} />
           <Route exact path="/addParts" component={AddParts} />
           <Route exact path="/addProducts" component={AddProducts} />
@@ -81,6 +85,22 @@ const Nav = ({ history, currentUser }) => {
       {currentUser ? (
         // Signed In User
         <Box>
+          <Button
+            mr="1rem"
+            colorScheme="yellow"
+            variant="outline"
+            onClick={() => history.push('/graph')}
+          >
+            Ratio
+          </Button>
+          <Button
+            mr="1rem"
+            colorScheme="yellow"
+            variant="outline"
+            onClick={() => history.push('/graph2')}
+          >
+            Stats
+          </Button>
           <Button
             mr="1rem"
             colorScheme="yellow"
