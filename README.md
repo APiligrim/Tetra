@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a>
-    <img src="media/" alt="Logo">
+    <img src="tetra-logo.png" alt="Logo">
   </a>
 
 <!-- TABLE OF CONTENTS -->
@@ -39,7 +39,7 @@ This project
 Some of the completed user stories are:
 * As an admin, I am able to track which product to recycle
 * As an admin, I am able to add a new product to the chain 
-* As an admin, I am able to add a new component (that is part of the product) to the chain 
+* As an admin, I am able to add or ship new materials (that are parts of the product) to the chain 
 * As an admin, I am able to see a history/timeline of where the components of a product have been recycled to
 
 
@@ -99,10 +99,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contributors
 
-1. Tayeeb Hassan -
-2. Krishna -
-3. Anastasiya Uraleva - anastasiyauraleva@gmail.com
-
+1. Tayeeb Hassan - github
+2. Krishna - github
+3. Anastasiya Uraleva - github
 
 
 
