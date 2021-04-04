@@ -32,11 +32,11 @@
 <!-- ABOUT THE PROJECT -->
 # About The Project ✨🗺️ 
 
-We were inspired to create this project after reading ongoing [**news**](https://www.businessoffashion.com/articles/luxury/luxury-brands-burn-unsold-goods-what-should-they-do-instead) about famous luxury clothing brands yearly burning their unsold inventories. It was very surpising to learn about the number of high quality goods these brands have burned when they could have recycled them or kept a better track of their supply chain in order to prevent the result. These brands also have a lot more resources (which is why they are luxury brands) yet this problem keeps persisting which partly roots from a bigger issue of current supply chains not being sustainable enough to help brands improve their practices. 
+We were inspired to create this project after reading ongoing [**news**](https://www.businessoffashion.com/articles/luxury/luxury-brands-burn-unsold-goods-what-should-they-do-instead) about famous luxury clothing brands yearly burning their unsold inventories. It was very surpising to learn about the number of high quality goods these brands have burned when they could have recycled them or kept a better track of their supply chain in order to prevent the result. These brands also have more resources (which is why they are luxury brands) yet this problem keeps persisting which partly roots from a bigger issue of current supply chains not being sustainable enough to help brands improve their practices. 
 
-**Tetra** is a sustainable supply chain managment system that helps clothing brands have clear transparency in each stage of their supply chain while also helping them recycle more of their unsold inventory. 
+**Tetra** is a sustainable supply chain managment system that helps clothing brands have clear transparency into each stage of their supply chain while also helping them recycle more of their unsold inventory. 
 
-Tetra's technical backbone uses blockchain for business using Ethereum and Web3.js which 
+Tetra's technical backbone uses blockchain for business using Ethereum and Web3.js. This allows each product in the inventory to have a unique ID that can be traced and tracked to see which stages in the supply chain it has gone through (example: shipping stage, factory, supply). It will also show what types of materials this product is made out of. If this item is unsold, admins can send the item to a recycling facility. Once a product gets recycled, users of Tetra can also trace the history of the different parts that made up that product got recycled into.
 
 Some of the completed user stories are:
 * 
