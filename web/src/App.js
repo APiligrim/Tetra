@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Box, Heading, Spacer, Flex, Text } from '@chakra-ui/react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-
+//Style imports
+import './assets/overall.css';
+import homeBackground from './assets/img/tetra-web.gif';
 // Page imports
 import Login from './pages/login';
 import Recycle from './pages/recycle';
@@ -9,6 +11,7 @@ import Recycle from './pages/recycle';
 import TableItems from './pages/tableItems';
 import AddParts from './pages/addParts';
 import AddProducts from './pages/addProducts';
+import logo from './assets/img/logo2.svg';
 
 // Component imports
 import Fonts from './components/Fonts';
@@ -26,7 +29,13 @@ const App = props => {
       <Box textAlign="center" fontSize="xl" p={6} height="100vh">
         <Nav history={props.history} currentUser={currentUser} />
         <Switch>
-          <Route exact path="/" component={() => <Text>Home</Text>} />
+          <Route
+            exact
+            path="/"
+            component={() => (
+              <img src={homeBackground} className="home-screen" />
+            )}
+          />
           <Route exact path="/login" component={Login} />
           <Route exact path="/recycle" component={Recycle} />
           <Route exact path="/table-items" component={tableItems} />
@@ -48,7 +57,7 @@ const Nav = ({ history, currentUser }) => {
           fontFamily="Allan"
           cursor="pointer"
         >
-          Tetra
+          <img className="logo" src={logo} />
         </Heading>
       </Box>
       <Spacer />
@@ -65,7 +74,12 @@ const Nav = ({ history, currentUser }) => {
       ) : (
         // No user
         <Box>
-          <Button mr="1rem" onClick={() => history.push('/login')}>
+          <Button
+            className="yellow-btn"
+            colorScheme="green"
+            mr="1rem"
+            onClick={() => history.push('/login')}
+          >
             Log in
           </Button>
         </Box>

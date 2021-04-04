@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import fetchApi from '../services/fetch-custom';
+import loginBackground from '../assets/img/login.gif'
+import '../assets/overall.css';
 import {
   Button,
   Heading,
@@ -90,6 +92,8 @@ const Login = props => {
   const { username, password } = state;
   return (
     <Flex justifyContent="center" alignItems="center" height="70vh">
+        <img src={loginBackground} />
+    <div className="arrange-to-top"> 
       <Flex
         textAlign="center"
         fontSize="md"
@@ -129,10 +133,12 @@ const Login = props => {
           onClick={handleSubmit}
           isLoading={loading ? true : false}
           loadingText="Submitting"
+          className='yellow-btn'
         >
           Submit
         </Button>
       </Flex>
+      </div>
     </Flex>
   );
 };
